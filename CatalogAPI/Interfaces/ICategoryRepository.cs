@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using CatalogAPI.Entity;
+
 namespace CatalogAPI.Interfaces
 {
-    public class ICategoryRepository
+    public interface ICategoryRepository : IBaseRepository<Category>
     {
-        public ICategoryRepository()
-        {
-        }
+        IEnumerable<Category> GetCategoryProducts();
     }
 }
